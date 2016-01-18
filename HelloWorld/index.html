@@ -1,0 +1,34 @@
+<head>
+  <script src="https://fb.me/react-0.14.6.js"></script>
+  <script src="https://fb.me/react-dom-0.14.6.js"></script>
+
+  <script src="https://fb.me/JSXTransformer-0.12.2.js"></script>
+</head>
+
+<body>
+
+<script type="text/jsx">
+// define a react component class
+var HelloWorld = React.createClass({
+
+  // A class must always have a render method. We use react-0 core library to instantiate class
+  // Analogy: Class is the Cookie Cutter and instantiate class is Cookie.
+  render: function() {
+    return <div>
+     Hello World
+    </div>
+  }
+
+});
+
+
+// Ask react to render this class. It just takes the instance of Class HelloWorld created above
+var element = React.createElement(HelloWorld);
+
+// When we ask react to render this class, we will tell it to place the rendered element in the dom.
+// We use react-dom-0 library to render.
+React.render(element, document.body);
+
+</script>
+
+</body>

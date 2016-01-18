@@ -1,0 +1,43 @@
+<head>
+  <script src="https://fb.me/react-0.14.6.js"></script>
+  <script src="https://fb.me/react-dom-0.14.6.js"></script>
+
+  <script src="https://fb.me/JSXTransformer-0.12.2.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+<script type="text/jsx">
+// define a react component class
+var HelloWorld = React.createClass({
+
+  // A class must always have a render method. We use react-0 core library to instantiate class
+  // Analogy: Class is the Cookie Cutter and instantiate class is Cookie.
+  render: function() {
+    return <button className="btn btn-primary" type="button">
+                {this.props.title} <span className="badge">{this.props.number}</span>
+           </button>
+
+  }
+
+});
+
+// Define options Object
+var options = {
+  title: 'Inbox',
+  number: 32
+};
+
+
+// Ask react to render this class. It just takes the instance of Class HelloWorld created above
+var element = React.createElement(Badge,options);
+
+// When we ask react to render this class, we will tell it to place the rendered element in the dom.
+// We use react-dom-0 library to render.
+React.render(element, document.body);
+
+</script>
+
+</body>
